@@ -1,0 +1,45 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: chapel
+    source:
+      address: "0xb44caD34aB39CE67eDAD517F6ee6eE76E480b7Cc"
+      abi: Contract
+      startBlock: 36974163
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - FeePayed
+        - NewDeposit
+        - Newbie
+        - OwnershipTransferred
+        - Paused
+        - UnStake
+        - Unpaused
+        - Withdrawn
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: FeePayed(indexed address,uint256)
+          handler: handleFeePayed
+        - event: NewDeposit(indexed address,uint8,uint8,uint256,uint256,uint256,uint256,uint256)
+          handler: handleNewDeposit
+        - event: Newbie(address,uint256)
+          handler: handleNewbie
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Paused(address)
+          handler: handlePaused
+        - event: UnStake(indexed address,uint256,uint256,uint256)
+          handler: handleUnStake
+        - event: Unpaused(address)
+          handler: handleUnpaused
+        - event: Withdrawn(indexed address,uint256,uint256,uint256,uint256)
+          handler: handleWithdrawn
+      file: ./src/contract.ts
