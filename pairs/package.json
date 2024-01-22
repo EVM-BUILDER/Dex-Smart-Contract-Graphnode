@@ -1,0 +1,17 @@
+{
+  "name": "pairs",
+  "description": "PancakeSwap Subgraph",
+  "version": "1.0.0",
+  "repository": "git@github.com:pancakeswap/pancake-subgraph.git",
+  "author": "PancakeSwap",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "codegen": "graph codegen subgraph.yaml",
+    "build": "graph build subgraph.yaml",
+    "deploy": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/pairs subgraph.yaml",
+    "deploy-bsc-testnet": "graph deploy --product hosted-service tdkhoa2002/pancake-pairs subgraph.yaml",
+    "create-server": "graph create --node http://171.244.136.191:8020 dex/pair",
+    "deploy-server": "graph deploy --node http://171.244.136.191:8020 --ipfs https://ipfs.network.thegraph.com/ipfs/ dex/pair subgraph.yaml",
+    "deploy-avax": "graph deploy --product hosted-service ttsgoerbridge/dexswap-avax subgraph.avax.yaml"
+  }
+}
