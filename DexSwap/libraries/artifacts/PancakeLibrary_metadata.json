@@ -1,0 +1,58 @@
+{
+	"compiler": {
+		"version": "0.5.16+commit.9c3226ce"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/PancakeLibrary.sol": "PancakeLibrary"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"interfaces/IPancakeFactory.sol": {
+			"keccak256": "0xea125e6c4e3c52bce633dc5667b1e108c63ef48866943eb6c4074f19b23ed7c5",
+			"urls": [
+				"bzz-raw://c875e62eaaeab86a84108aa360d1dab9e9b4c9dd06299595bfb512c4259b1050",
+				"dweb:/ipfs/QmW88oRqeybnNXsLM4P6cfTfYPdpEUR3742rYkPY2zmFv2"
+			]
+		},
+		"interfaces/IPancakePair.sol": {
+			"keccak256": "0xb3d3ac8e3e41ff3b87b26672225c38b36be5a52008288bd6a3b83b7d68f572d6",
+			"urls": [
+				"bzz-raw://3ab097e4c47e0069f2e45cce7ccbb6d731c107fd4fff2db13663425a17e52ee5",
+				"dweb:/ipfs/QmNmrZbJj5YG3QrLVUNMS4VnXNBfSRwqwZ8nAEdALMFQSR"
+			]
+		},
+		"libraries/PancakeLibrary.sol": {
+			"keccak256": "0xeebef08b0cda5ab662f0d096a3c2f747a4e2559f710339ec65c2a606609228b0",
+			"urls": [
+				"bzz-raw://17b535ee3d3d2c07267a12d3d7c6b104320952b008683139e9e96c338001a720",
+				"dweb:/ipfs/QmRUBVGm1NvuDXLrHDFowzc5haZwsp8QZzEU8rAFf9hLmh"
+			]
+		},
+		"libraries/SafeMath.sol": {
+			"keccak256": "0xd0cc5ede4252f34f9adf75af689fb003aa6349f229b9bba72db43cba9bb1c9d9",
+			"urls": [
+				"bzz-raw://a2cb594533aebe5028b93c5c429b23907a4830964d8c6728565992bee4cf1eef",
+				"dweb:/ipfs/QmdSBCeJiqjQeGZ2K79DXaDfaqJMtXCWAyXDWJ3KNDWZKM"
+			]
+		}
+	},
+	"version": 1
+}
