@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: NFTStaking
@@ -24,13 +24,13 @@ dataSources:
         - Withdrawn
       abis:
         - name: NFTStaking
-          file: ./abis/NFTStaking.json
+          file: NFTStaking\abis\NFTStaking.json
         - name: ERC20
-          file: ./abis/ERC20.json
+          file: NFTStaking\abis\ERC20.json
         - name: ERC20NameBytes
-          file: ./abis/ERC20NameBytes.json
+          file: NFTStaking\abis\ERC20NameBytes.json
         - name: ERC20SymbolBytes
-          file: ./abis/ERC20SymbolBytes.json
+          file: NFTStaking\abis\ERC20SymbolBytes.json
       eventHandlers:
         - event: FeePayed(indexed address,uint256)
           handler: handleFeePayed
@@ -48,4 +48,4 @@ dataSources:
           handler: handleUnpaused
         - event: Withdrawn(indexed address,uint256,uint256,uint256,uint256)
           handler: handleWithdrawn
-      file: ./src/NFTStaking.ts
+      file: NFTStaking\NFTStaking.wasm
